@@ -1,3 +1,5 @@
+/* eslint-disable import/no-anonymous-default-export */
+
 import {
   GET_GAMES,
   GET_STANDINGS,

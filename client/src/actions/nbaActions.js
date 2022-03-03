@@ -42,12 +42,11 @@ const compare = (a, b) => {
 
 export const getTeams = () => dispatch => {
   const proxyurl = "https://cors-proxy-dv.herokuapp.com/";
-  const url = "http://data.nba.net/prod/v1/2019/team_stats_rankings.json";
+  const url = "http://data.nba.net/prod/v1/2020/team_stats_rankings.json";
   axios.get(proxyurl + url).then(res =>
     dispatch({
       type: GET_TEAMS,
       payload: res.data.league.standard.regularSeason.teams
-        .slice(8, 38)
         .sort(compare)
     })
   );
