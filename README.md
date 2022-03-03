@@ -1,5 +1,5 @@
-# NewBA
-NewBA is an alternative to the NBA website that allows users to view games, box scores, standings, and team stats, among other
+# Basketball Junkie
+Basketball Junkie is an alternative to the NBA website that allows users to view games, box scores, standings, and team stats, among other
 features.
 
 ## Features
