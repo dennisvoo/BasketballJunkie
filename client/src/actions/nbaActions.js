@@ -1,4 +1,5 @@
 import axios from "axios";
+import { app } from './axiosConfig.js';
 import { GET_GAMES, GET_STANDINGS, GET_TEAMS, GET_MVP_TEAMS } from "./types";
 
 const getToday = async () => {
@@ -53,7 +54,7 @@ export const getTeams = () => dispatch => {
 };
 
 export const getMVPTeams = () => dispatch => {
-  axios.get("/scrape").then(res =>
+  app.get("/scrape").then(res =>
     dispatch({
       type: GET_MVP_TEAMS,
       payload: res.data

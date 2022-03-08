@@ -1,4 +1,5 @@
 import axios from "axios";
+import { app } from './axiosConfig.js';
 import { returnErrors } from "./errorActions";
 
 import {
@@ -19,7 +20,7 @@ export const loadUser = () => (dispatch, getState) => {
   // User loading
   dispatch({ type: USER_LOADING });
 
-  axios
+  app
     .get("/api/auth/user", tokenConfig(getState))
     .then(res =>
       dispatch({
@@ -65,7 +66,7 @@ export const register = ({
     prefTopTeams
   });
 
-  axios
+  app
     .post("/api/users", body, config)
     .then(res =>
       dispatch({
@@ -95,7 +96,7 @@ export const login = ({ email, password }) => dispatch => {
   // Request body
   const body = JSON.stringify({ email, password });
 
-  axios
+  app
     .post("/api/auth", body, config)
     .then(res =>
       dispatch({
@@ -132,7 +133,7 @@ export const update = ({
     prefTopTeams
   });
 
-  axios
+  app
     .patch(`/api/auth/user`, body, tokenConfig(getState))
     .then(res =>
       dispatch({
