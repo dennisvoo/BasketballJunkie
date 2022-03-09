@@ -20,7 +20,6 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   },
-  "homepage": "https://dennisvoo.github.io/basketballjunkie",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
